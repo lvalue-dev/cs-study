@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CS Academy — 컴퓨터 과학 학습 플랫폼</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-shell">
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <span class="logo-icon">⬡</span>
+          <span class="logo-text">CS Academy</span>
+        </div>
+        <button class="sidebar-close" id="sidebarClose" aria-label="닫기">✕</button>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="sidebar-progress">
+        <div class="progress-label">
+          <span>학습 진도</span>
+          <span id="progressPct">0%</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="#home" data-section="home">
+          <span class="nav-icon">🏠</span><span>홈</span>
+        </a>
+
+        <div class="nav-group">
+          <div class="nav-group-title">💻 CS 기초</div>
+          <a class="nav-item sub" href="#cs/computer-arch" data-section="cs/computer-arch">컴퓨터 구조</a>
+          <a class="nav-item sub" href="#cs/os" data-section="cs/os">운영체제</a>
+          <a class="nav-item sub" href="#cs/network" data-section="cs/network">네트워크</a>
+          <a class="nav-item sub" href="#cs/database" data-section="cs/database">데이터베이스</a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title">🔄 알고리즘</div>
+          <a class="nav-item sub" href="#algo/visualizer" data-section="algo/visualizer">시각화 도구</a>
+          <a class="nav-item sub" href="#algo/data-structures" data-section="algo/data-structures">자료구조</a>
+          <a class="nav-item sub" href="#algo/complexity" data-section="algo/complexity">시간 복잡도</a>
+          <a class="nav-item sub" href="#algo/dp" data-section="algo/dp">동적 프로그래밍</a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title">🎨 프론트엔드</div>
+          <a class="nav-item sub" href="#fe/browser" data-section="fe/browser">브라우저 동작 원리</a>
+          <a class="nav-item sub" href="#fe/javascript" data-section="fe/javascript">JavaScript 심화</a>
+          <a class="nav-item sub" href="#fe/css-layout" data-section="fe/css-layout">CSS &amp; 레이아웃</a>
+          <a class="nav-item sub" href="#fe/playground" data-section="fe/playground">코드 실습</a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title">⚙️ 백엔드</div>
+          <a class="nav-item sub" href="#be/http" data-section="be/http">HTTP &amp; REST API</a>
+          <a class="nav-item sub" href="#be/auth" data-section="be/auth">인증 &amp; 보안</a>
+          <a class="nav-item sub" href="#be/db-design" data-section="be/db-design">DB 설계</a>
+          <a class="nav-item sub" href="#be/architecture" data-section="be/architecture">서버 아키텍처</a>
+        </div>
+
+        <a class="nav-item" href="#quiz" data-section="quiz">
+          <span class="nav-icon">🎯</span><span>퀴즈 &amp; 평가</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle" id="themeToggle" title="테마 전환">
+          <span class="theme-icon">🌙</span>
+          <span class="theme-label">다크 모드</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ── Main ── -->
+    <div class="main-wrapper">
+      <header class="topbar">
+        <button class="hamburger" id="hamburger" aria-label="메뉴">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="breadcrumb" id="breadcrumb">
+          <span>홈</span>
+        </nav>
+        <div class="topbar-actions">
+          <div class="search-box" id="searchBox">
+            <input type="text" placeholder="개념 검색..." id="searchInput" />
+            <span class="search-icon">🔍</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="content-area" id="contentArea">
+        <!-- Rendered by JS -->
+      </main>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/visualizer.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
